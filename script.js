@@ -1,0 +1,7 @@
+function getComputerChoice() {
+
+}
+
+function getHumanChoice() {
+    
+}
