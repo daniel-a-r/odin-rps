@@ -12,5 +12,22 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
+    let humanChoice;
+    
+    while (true) {
+        humanChoice = prompt('Enter "rock", "paper", or "scissors".');
+        humanChoice = humanChoice.toLowerCase().trim();
+
+        if (humanChoice !== 'rock' && humanChoice !== 'paper' && humanChoice !== 'scissors') {
+            alert("Invalid choice.");
+        } else {
+            break;
+        }
+    }
+
+    return humanChoice;
+}
+
+function playRound() {
     
 }
