@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random() * 3);
+    const computerChoice = Math.floor(Math.random() * 3);
 
     switch (computerChoice) {
         case 0:
@@ -29,8 +29,8 @@ function getHumanChoice() {
 }
 
 function playRound() {
-    let computerChoice = getComputerChoice();
-    let humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
+    const humanChoice = getHumanChoice();
 
     if (humanChoice === 'rock' && computerChoice === 'paper'
         || humanChoice === 'paper' && computerChoice === 'scissors'
