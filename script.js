@@ -3,6 +3,8 @@ let computerScore = 0;
 
 const hScorePara = document.querySelector('#human-score');
 const cScorePara = document.querySelector('#computer-score');
+const hSelecPara = document.querySelector('#human-selected');
+const cSelecPata = document.querySelector('#computer-selected');
 
 hScorePara.textContent = getHScoreText();
 cScorePara.textContent = getCScoreText();
@@ -25,6 +27,15 @@ function getScoreText(score) {
     return `${score}`;
 }
 
+function capitalize(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1)
+}
+
+function updateSelectionText(human, computer) {
+    hSelecPara.textContent = capitalize(human);
+    cSelecPata.textContent = capitalize(computer);
+}
+
 function getComputerChoice() {
     const computerChoice = Math.floor(Math.random() * 3);
 
@@ -39,7 +50,7 @@ function getComputerChoice() {
 }
 
 function playRound() {
-    const humanChoice = this.textContent.toLowerCase();
+    const humanChoice = this.id;
     const computerChoice = getComputerChoice();
     let result;
 
@@ -58,6 +69,7 @@ function playRound() {
         result = 2;
     }
 
+    updateSelectionText(humanChoice, computerChoice);
     updateScore(result);
 }
 
@@ -107,6 +119,9 @@ function newGame() {
     computerScore = 0;
     hScorePara.textContent = getHScoreText();
     cScorePara.textContent = getCScoreText();
+    hSelecPara.textContent = '';
+    cSelecPata.textContent = '';
+    
     const div = document.querySelector('.game-result');
     div.remove();
     btns.forEach(btn => {
