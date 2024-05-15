@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(238, 232, 232);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.score-container, 
+.selection-container,
+.buttons-container,
+.scores {
+    display: flex;
+    justify-content: center;
+}
+
+.player-container {
+    display: flex;
+    justify-content: end;
+}
+
+.player-container div {
+    min-width: 111.5px;
+}
+
+.score-title {
+    min-width: 111.5px;
+}
+
+.scores div {
+    min-width: 111.5px;
+}
+
+.selection-title {
+    min-width: 111.5px;
+}
+
+.selections {
+    display: flex;
+}
+
+.selections div {
+    min-width: 111.5px;
+}
+
+.buttons-container {
+    gap: 10px;
+}
+
+button {
+    min-width: 90px;
+    height: 28px;
+}

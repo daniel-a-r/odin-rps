@@ -14,15 +14,15 @@ btns.forEach(btn => {
 });
 
 function getHScoreText() {
-    return getScoreText('You', humanScore)
+    return getScoreText(humanScore);
 }
 
 function getCScoreText() {
-    return getScoreText('Computer', computerScore);
+    return getScoreText(computerScore);
 }
 
-function getScoreText(player, score) {
-    return `${player}: ${score}`
+function getScoreText(score) {
+    return `${score}`;
 }
 
 function getComputerChoice() {
